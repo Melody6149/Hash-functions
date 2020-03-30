@@ -10,6 +10,10 @@
 ********************************************************************************************/
 
 #include "raylib.h"
+#include "Hash.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
 
 int main()
 {
@@ -22,7 +26,9 @@ int main()
 
 	SetTargetFPS(60);
 	//--------------------------------------------------------------------------------------
+	unsigned int hashValue = Hash::Melody("Melody",6);
 
+	std::cout /*<< std::hex*/ << hashValue << std::endl;
 	// Main game loop
 	while (!WindowShouldClose())    // Detect window close button or ESC key
 	{
